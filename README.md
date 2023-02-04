@@ -83,7 +83,7 @@ async def getDomainAmount():
 
 #Get the amount of all Phishing Domains
 async def getPhishingDomainAmount():
-  const amount = await stopPhishing.phishingDomainCount() #Number
+  amount = await stopPhishing.phishingDomainCount() #Number
   print(amount)
   return amount
 
