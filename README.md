@@ -43,7 +43,7 @@ async def checkMessage(TEST_MESSAGE):
 
 #Check string on confirmed Phishing Domains & suspicious Domains RECOMMENDED!
 async def checkMessageFull(TEST_MESSAGE):
-  isGrabber = await stopPhishing.checkMessage(message, true); #True
+  isGrabber = await stopPhishing.checkMessage(message, true) #True
   print(isGrabber)
   return isGrabber
 
@@ -53,7 +53,7 @@ async def checkMessageFull(TEST_MESSAGE):
 
 ```py
 async def listPhishingDomains():
-  links = await stopPhishing.listPhishingDomains(); //[]
+  links = await stopPhishing.listPhishingDomains() //[]
   #Now you can do something with Array with all the confirmed Phishing Domains in it
   print(links)
   return links
@@ -83,7 +83,7 @@ async def getDomainAmount():
 
 #Get the amount of all Phishing Domains
 async def getPhishingDomainAmount():
-  const amount = await stopPhishing.phishingDomainCount(); #Number
+  const amount = await stopPhishing.phishingDomainCount() #Number
   print(amount)
   return amount
 
