@@ -1,8 +1,12 @@
 from stopPhishing.functions import list
 
 async def checkMessage(message_content : str, scanSuspiciousDomains : bool = False):
-    # check if a message contains a phishing link
-    # returns True if a phishing link was found, False otherwise
+    """
+    Check if a message contains a phishing domain
+    :param: message_content: str - the message to check
+    :param: scanSuspiciousDomains: bool - whether to scan suspicious domains or not (default: False)
+    :returns: bool - True if the message contains a phishing domain, False otherwise
+    """
     domains = await list.listPhishingDomains()
     if scanSuspiciousDomains:
         domains += await list.listSuspiciousDomains()
@@ -12,8 +16,11 @@ async def checkMessage(message_content : str, scanSuspiciousDomains : bool = Fal
     return False
 
 async def checkDomain(domainToCheck : str):
-    # check if a domain is a phishing domain
-    # returns True if the domain is a phishing domain, False otherwise
+    """
+    Check if a domain is a phishing domain
+    :param: domainToCheck: str - the domain to check
+    :returns: bool - True if the domain is a phishing domain, False otherwise
+    """
     domains = await list.listPhishingDomains()
     for domain in domains:
         if domain == domainToCheck:
@@ -21,8 +28,11 @@ async def checkDomain(domainToCheck : str):
     return False
 
 async def susDomainsChecker(domainToCheck : str):
-    # check if a domain is a suspicious domain
-    # returns True if the domain is a suspicious domain, False otherwise
+    """
+    Check if a domain is a suspicious domain
+    :param: domainToCheck: str - the domain to check
+    :returns: bool - True if the domain is a suspicious domain, False otherwise
+    """
     domains = await list.listSuspiciousDomains()
     for domain in domains:
         if domain == domainToCheck:

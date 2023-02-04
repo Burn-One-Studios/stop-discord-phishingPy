@@ -9,7 +9,7 @@ CACHE_DURATION = 1000 * 60 * 30 # 30 minutes
 cache = dict()
 
 async def update_lists():
-    # update the lists from the internet if the list is older than CACHE_DURATION
+    # Update the lists of phishing domains
     global cache
     if ( 
         not cache.get("guaranteed")  
