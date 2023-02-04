@@ -1,13 +1,13 @@
 from stopPhishing.functions import list
 
-async def checkMessage(message : str, scanSuspiciousDomains : bool = False):
+async def checkMessage(message_content : str, scanSuspiciousDomains : bool = False):
     # check if a message contains a phishing link
     # returns True if a phishing link was found, False otherwise
     domains = await list.listPhishingDomains()
     if scanSuspiciousDomains:
         domains += await list.listSuspiciousDomains()
     for domain in domains:
-        if domain in message:
+        if domain in message_content:
             return True
     return False
 
