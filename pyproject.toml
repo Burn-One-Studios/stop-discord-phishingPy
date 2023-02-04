@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stopPhishing"
+description = "A simple python library to check if a url is a phishing link or not."
+version = "0.0.1"
+readme = "README.md"
+authors = [
+    { name="kings", email="info@kings" }
+]
+requires-python = ">=3.6"
+license = { text = "GPL-3.0-only" }
+classifiers = [
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = ["requests", "datetime"]
+keywords = ["Phishing Detection", "Anti Phishing", "discord", "discordpy", "disnake", "pycord", "nextcord"]
+
+[project.urls]
+Homepage = "https://github.com/Burn-One-Studios/stop-discord-phishingPy"
+Discord = "https://discord.gg/yKyN9Q3Vmy"
+Donate = "https://ko-fi.com/kingzscripts"
