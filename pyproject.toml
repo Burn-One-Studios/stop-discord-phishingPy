@@ -8,7 +8,7 @@ description = "A simple python library to check if a url is a phishing link or n
 version = "0.0.1"
 readme = "README.md"
 authors = [
-    { name="kings", email="info@kings" }
+    { name="kings", email="info@kings.com" }
 ]
 requires-python = ">=3.6"
 license = { text = "GPL-3.0-only" }
