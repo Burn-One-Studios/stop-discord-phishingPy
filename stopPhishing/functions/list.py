@@ -11,7 +11,12 @@ cache = dict()
 async def update_lists():
     # update the lists from the internet if the list is older than CACHE_DURATION
     global cache
-    if cache.get("guaranteed") is None or cache.get("suspicious") is None or cache.get("last_update") is None or cache.get("last_update") + CACHE_DURATION < datetime.datetime.now().timestamp():
+    if ( 
+        not cache.get("guaranteed")  
+        or not cache.get("suspicious") 
+        or not cache.get("last_update") 
+        or cache.get("last_update") + CACHE_DURATION < datetime.datetime.now().timestamp()
+    ):
         cache["last_update"] = datetime.datetime.now().timestamp()
         cache["guaranteed"] = requests.get(URL_GUARANTEED).json()
         cache["suspicious"] = requests.get(URL_SUSPICIOUS).json()
