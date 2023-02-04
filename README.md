@@ -53,7 +53,7 @@ async def checkMessageFull(TEST_MESSAGE):
 
 ```py
 async def listPhishingDomains():
-  links = await stopPhishing.listPhishingDomains() //[]
+  links = await stopPhishing.listPhishingDomains() #[]
   #Now you can do something with Array with all the confirmed Phishing Domains in it
   print(links)
   return links
