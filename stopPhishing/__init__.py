@@ -2,7 +2,7 @@ from stopPhishing.functions.amount import allDomainCount, phishingDomainCount, s
 from stopPhishing.functions.check import checkDomain, checkMessage, susDomainsChecker
 from stopPhishing.functions.list import listAllDomains, listPhishingDomains, listSuspiciousDomains
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 __all__ = [
     'allDomainCount',

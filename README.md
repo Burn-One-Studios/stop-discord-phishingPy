@@ -32,12 +32,12 @@ import stopPhishing
 
 ### Check if String contains a Phishing Link:
 
-```python
-TEST_MESSAGE = "this is definitivelynotascamdomain.ru that should be checked";
+```py
+TEST_MESSAGE = "this is definitivelynotascamdomain.ru that should be checked"
 
 #Check string on confirmed Phishing Domains
 async def checkMessage(TEST_MESSAGE):
-  isGrabber = await stopPhishing.checkMessage(message) #True
+  isGrabber = await stopPhishing.checkMessage(TEST_MESSAGE) #True
   print(isGrabber)
   return isGrabber
 
@@ -65,7 +65,7 @@ async def listSuspiciousDomains():
   return links
 
 async def listAllDomains():
-  links = await stopPhishing.listAllDomains() #[]
+  links = await stopPhishing.allDomainCount() #[]
   #Now you can do something with Array with all the suspicious and confirmed phishing Domains in it
   print(links)
   return links
@@ -109,6 +109,10 @@ nikolaischunk - "stop-discord-phishing" project owner and npm package maintainer
 mahtoid - code review
 
 ## Changelog
+
+#### 0.0.2
+- Added example.py to show how to use the package
+- Readme edits
 
 #### 0.0.1
 
